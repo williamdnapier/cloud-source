@@ -1,3 +1,9 @@
+/*
+This authMiddleware.js was written by Adam Freeman. It inspects HTTP requests which are sent to the web service and implements
+some basic security features. This is server-side code and is not directly relevant to Vue.js but rather just gives a way
+to develop these Vue.js components.
+ */
+
 const jwt = require("jsonwebtoken");
 
 const APP_SECRET = "myappsecret";

@@ -1,3 +1,9 @@
+/*
+In the package.json file there is a scripts section which will run a RESTful web service with this data.
+"json": "json-server data.js -p 3500 -m authMiddleware.js" <-- this line loads the data.js into json-server on port 3500.
+It also loads our authMiddleware.js file which will be used to authenticate jwt tokens.
+ */
+
 const data = [
     {
         id: 1,

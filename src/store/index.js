@@ -45,6 +45,11 @@ export default new Vuex.Store({
     },
     actions: {
         async getData(context) {
+            /*
+            The Axios package provides a GET method which is used to send the HTTP GET requests to the web service.
+            In this async getData promise, we await the results of the get requests. The get method returns an object
+            whose data property returns a JavaScript object that has been parsed from the JSON response from the web service.
+             */
             let pdata = (await Axios.get(productsUrl)).data;
             let cdata = (await Axios.get(categoriesUrl)).data;
             context.commit("setData", { pdata, cdata} );
