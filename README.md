@@ -1,5 +1,8 @@
 # cloudsource
 
+## About CloudSource
+CloudSource is a vue UI which will enable users to select and purchase Azure cloud resources.
+
 ## Project setup
 ```
 yarn install
