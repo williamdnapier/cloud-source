@@ -23,8 +23,8 @@ module.exports = function (req, res, next) {
         }
         res.end();
         return;
-    } else if ((((req.url.startsWith("/api/products")
-                || req.url.startsWith("/products"))
+    } else if ((((req.url.startsWith("/api/resources")
+                || req.url.startsWith("/resources"))
             || (req.url.startsWith("/api/categories")
                 || req.url.startsWith("/categories"))) && req.method != "GET")
         || ((req.url.startsWith("/api/orders")

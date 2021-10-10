@@ -6,23 +6,23 @@ import Axios from "axios";
 Vue.use(Vuex);
 
 const baseUrl = "http://localhost:3500";
-const productsUrl = `${baseUrl}/products`;
+const resourcesUrl = `${baseUrl}/resources`;
 const categoriesUrl = `${baseUrl}/categories`;
 
 export default new Vuex.Store({
     strict: true,
     state: {
-        products: [],
+        resources: [],
         categoriesData: [],
-        productsTotal: 0,
+        resourcesTotal: 0,
         currentPage: 1,
         pageSize: 4,
         currentCategory: "All"
     },
     getters: {
-        productsFilteredByCategory: state => state.products.filter(p => state.currentCategory == "All" || p.category == state.currentCategory),
-        processedProducts: (state, getters) => { let index = (state.currentPage - 1) * state.pageSize; return getters.productsFilteredByCategory.slice(index, index + state.pageSize); },
-        pageCount: (state, getters) => Math.ceil(getters.productsFilteredByCategory.length / state.pageSize),
+        resourcesFilteredByCategory: state => state.resources.filter(p => state.currentCategory == "All" || p.category == state.currentCategory),
+        processedresources: (state, getters) => { let index = (state.currentPage - 1) * state.pageSize; return getters.resourcesFilteredByCategory.slice(index, index + state.pageSize); },
+        pageCount: (state, getters) => Math.ceil(getters.resourcesFilteredByCategory.length / state.pageSize),
         categories: state => ["All", ...state.categoriesData]
     },
     mutations: {
@@ -38,8 +38,8 @@ export default new Vuex.Store({
             state.currentPage = 1;
         },
         setData(state, data) {
-            state.products = data.pdata;
-            state.productsTotal = data.pdata.length;
+            state.resources = data.pdata;
+            state.resourcesTotal = data.pdata.length;
             state.categoriesData = data.cdata.sort();
         }
     },
@@ -50,7 +50,7 @@ export default new Vuex.Store({
             In this async getData promise, we await the results of the get requests. The get method returns an object
             whose data property returns a JavaScript object that has been parsed from the JSON response from the web service.
              */
-            let pdata = (await Axios.get(productsUrl)).data;
+            let pdata = (await Axios.get(resourcesUrl)).data;
             let cdata = (await Axios.get(categoriesUrl)).data;
             context.commit("setData", { pdata, cdata} );
         }

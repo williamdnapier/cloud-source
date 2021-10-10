@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="p in products" v-bind:key="p.id" class="card m-1 p-1 bg-light">
+    <div v-for="p in resources" v-bind:key="p.id" class="card m-1 p-1 bg-light">
       <h4>{{p.name}}
         <span class="badge badge-pill badge-primary float-right">{{ p.price | currency }}</span>
       </h4>
@@ -25,7 +25,7 @@ import PageControls from "./PageControls";
 export default {
   components: { PageControls },
   computed: {
-    ...mapGetters({ products: "processedProducts" })
+    ...mapGetters({ resources: "processedresources" })
   },
   filters: {
     currency(value) {

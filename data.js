@@ -71,7 +71,7 @@ const data = [
 
 module.exports = function () {
     return {
-        products: data,
+        resources: data,
         categories: [...new Set(data.map(p => p.category))].sort(),
         orders: []
     }
