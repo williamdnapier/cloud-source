@@ -7,10 +7,10 @@
     </div>
     <div class="row">
       <div class="col-3 p-2">
-        <CategoryControls />
+        <TagControls />
       </div>
       <div class="col-9 p-2">
-        <ProductList />
+        <ResourceList />
       </div>
     </div>
   </div>
@@ -18,11 +18,11 @@
 
 <script>
 
-import ProductList from "./ProductList";
-import CategoryControls from "./CategoryControls";
+import ResourceList from "./ResourceList";
+import TagControls from "./TagControls";
 
 export default {
-  components: { ProductList, CategoryControls }
+  components: { ResourceList, TagControls }
 }
 
 </script>
