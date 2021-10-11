@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import Axios from "axios";
+import CartModule from './cart';
 
 Vue.use(Vuex);
 
@@ -10,6 +11,7 @@ const tagsUrl = `${baseUrl}/tags`;
 
 export default new Vuex.Store({
     strict: true,
+    modules: { cart: CartModule },
     state: {
         resources: [],
         tagsData: [],
