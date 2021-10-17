@@ -43,5 +43,10 @@
   }
 </script>
 <!--
-This component uses props which allows a parent component to provide data to its children. It has a prop called line which its parent will use to provide the line from the shopping cart that it will display to the user. This component also sends a custom event to communicate with its parent. When the user changes the value of the input element that displays the quantity or clicks the Remove button, the component will call this.$emit method to send an event to its parent component. This is another way to connect components to create features without having to use global features like the data store.
+This component uses props which allows a 
+parent component to provide data to its 
+children. It has a prop called line 
+which its parent will use to provide 
+the line from the shopping cart that 
+it will display to the user. This component also sends a custom event to communicate with its parent. When the user changes the value of the input element that displays the quantity or clicks the Remove button, the component will call this.$emit method to send an event to its parent component. This is another way to connect components to create features without having to use global features like the data store.
 -->
