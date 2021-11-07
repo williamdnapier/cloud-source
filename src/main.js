@@ -7,6 +7,20 @@ import router from './router'
 
 Vue.config.productionTip = false;
 
+//Creating a global filter
+//Currently, we have a currency filer defined in the ResourceList.vue component.
+//Now that we have added more features to the project, there are values in different components which will need to be
+//formatted as currency. So, in this main.js file, we can add a global currency filter. This way we can register it
+//to be used by all components.
+Vue.filter('currency', (value) =>
+    new Intl.NumberFormat('en-US',
+        {style: 'currency', currency: 'USD'}
+        ).format(value)
+);
+
+//Many component features can be defined globally to avoid code duplication.
+//Global filters are defined using the Vue.filter method. This method must be called before the Vue object is created.
+
 new Vue({
   render: h => h(App),
   store,
