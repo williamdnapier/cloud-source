@@ -3,3 +3,7 @@
     Placeholder
   </h4>
 </template>
+
+<!--
+Currently, this component doesn't provide any functionality but it will indicate when the cart should be displayed from a routing request.
+-->
