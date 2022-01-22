@@ -3,7 +3,7 @@
     <td>
       <input type='number' class='form-control-sm' style='width:5em' v-bind:value='qvalue' v-on:input='sendChangeEvent' />
     </td>
-    <td>{{ line.resource.name }}}</td>
+    <td>{{ line.resource.name }}</td>
     <td class='text-right'>
       {{ line.resource.price | currency }}
     </td>
