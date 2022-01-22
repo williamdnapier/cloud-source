@@ -1,6 +1,19 @@
 ## About CloudSource
 CloudSource is a Vue.js UI which will enable users to select and purchase Azure cloud resources.
 
+## To run this app:
+1. Open a terminal session and enter:
+```
+npm run json
+```
+This starts json-server.
+
+2. Open another terminal session and enter:
+```
+npm run serve
+```
+This will run our Vue.js UI.
+
 ## Azure Integration
 This app simply focuses on creating a Vue.js UI which could call Azure RESTful API endpoints to retrieve resources. The main purpose of this app is to focus on Vue.js development and NOT integrating Azure API calls. As such, we will mock out a json-server which will return all the data required by our Vue components.
 
