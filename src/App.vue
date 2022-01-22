@@ -10,22 +10,14 @@ export default {
   name: 'app',
   //components: { Store },
   methods: {
-    ...mapActions(["getData"])
+    ...mapActions({
+      getData: "getData",
+      initializeCart: "cart/initializeCart"
+    })
   },
   created() {
     this.getData();
+    this.initializeCart(this.$store);
   }
 }
 </script>
-
-/*
-To run this app:
-
-1. Open a terminal session and enter:
-npm run json
-This starts json-server.
-
-2. Open another terminal session and enter:
-npm run serve
-This will run our Vue.js UI.
-*/
